@@ -9,8 +9,8 @@ import {
 const socialLinks = [
   {
     name: "Facebook",
-    displayName: "Let's Connect",
-    subText: "on Facebook",
+    displayName: "Facebook",
+    subText: "@Nontachai Chaiyawong",
     icon: Facebook,
     url: "https://www.facebook.com/Goodnothing15229",
     color: "#0A66C2",
@@ -38,9 +38,9 @@ const socialLinks = [
   {
     name: "GitHub",
     displayName: "Github",
-    subText: "@Nontachai Chaiyawong",
+    subText: "@Ded2ec",
     icon: Github,
-    url: "https://github.com/ded2ec15229",
+    url: "https://github.com/ded2ec",
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]"
   },

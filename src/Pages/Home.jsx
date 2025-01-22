@@ -100,11 +100,11 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Passionate about building web applications", "Enjoy working with networks"];
-const TECH_STACK = ["Skill & Experience"];
+// const TECH_STACK = [""];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/EkiZR" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ekizr/" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id" }
+  { icon: Github, link: "https://github.com/ded2ec" },
+  { icon: Mail, link: "mailto:nontachai15229@gmail.com" },
+  { icon: Instagram, link: "https://www.instagram.com/ded2ec15229/?en=id" }
 ];
 
 const Home = () => {
@@ -229,25 +229,26 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                  Creative and passionate about learning new technologies.
+                  Constantly seeking opportunities to explore innovative ideas and apply them effectively.
+                  Driven by curiosity and a commitment to staying ahead in the ever-evolving tech world.
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3 justify-start" data-aos="fade-up" data-aos-delay="1200">
+                {/* <div className="flex flex-wrap gap-3 justify-start" data-aos="fade-up" data-aos-delay="1200">
                   {TECH_STACK.map((tech, index) => (
                     <TechStack key={index} tech={tech} />
                   ))}
-                </div>
+                </div> */}
 
               
                 {/* CTA Buttons */}
                 <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
                 
-                <CTAButton href="#Portofolio" text="Skill" icon={ExternalLink} handleChangeValue={handleChangeValue2} />
+                <CTAButton href="#Portofolio" text="Skill & Experience" icon={ExternalLink} handleChangeValue={handleChangeValue2} />
                  
                   <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} handleChangeValue={handleChangeValue0} />
                 
-                  <CTAButton href="#Contact" text="Contact" icon={Mail} />
                 </div>
 
                 {/* Social Links */}

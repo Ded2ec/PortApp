@@ -14,7 +14,7 @@ import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
-import { Code, Award, Boxes } from "lucide-react";
+import { Code, Wrench, Boxes } from "lucide-react";
 import { useValue } from './ValueContext.jsx'; 
 
 // Separate ShowMore/ShowLess button component
@@ -102,18 +102,43 @@ function a11yProps(index) {
 }
 
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
-  { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "/icontech/html.svg", language: "HTML" },
+  { icon: "/icontech/css.svg", language: "CSS" },
+  { icon: "/icontech/javascript.svg", language: "JavaScript" },
+  { icon: "/icontech/tailwind.svg", language: "Tailwind CSS" },
+  { icon: "/icontech/reactjs.svg", language: "ReactJS" },
+  { icon: "/icontech/vite.svg", language: "Vite" },
+  { icon: "/icontech/nodejs.svg", language: "Node JS" },
+  { icon: "/icontech/bootstrap.svg", language: "Bootstrap" },
+  { icon: "/icontech/MUI.svg", language: "Material UI" },
+  { icon: "/icontech/AWS.svg", language: "AWS" },
+  { icon: "/icontech/Bun.svg", language: "Bun" },
+  { icon: "/icontech/Docker.svg", language: "Docker" },
+  { icon: "/icontech/Git.svg", language: "Git" },
+  { icon: "/icontech/Go.svg", language: "Go" },
+  { icon: "/icontech/Kotlin.svg", language: "Kotlin" },
+  { icon: "/icontech/Next.js.svg", language: "Next" },
+  { icon: "/icontech/PHP.svg", language: "PHP" },
+  { icon: "/icontech/PostgresSQL.svg", language: "PostgresSQL" },
+  { icon: "/icontech/Spring.svg", language: "SpringBoot" },
+
+];
+
+const technical = [
+  { icon: "/icontech/html.svg", language: "HTML" },
+  { icon: "/icontech/css.svg", language: "CSS" },
+  { icon: "/icontech/javascript.svg", language: "JavaScript" },
+  { icon: "/icontech/tailwind.svg", language: "Tailwind CSS" },
+  { icon: "/icontech/Bun.svg", language: "Bun" },
+  { icon: "/icontech/Docker.svg", language: "Docker" },
+  { icon: "/icontech/Git.svg", language: "Git" },
+  { icon: "/icontech/Go.svg", language: "Go" },
+  { icon: "/icontech/Kotlin.svg", language: "Kotlin" },
+  { icon: "/icontech/Next.js.svg", language: "Next" },
+  { icon: "/icontech/PHP.svg", language: "PHP" },
+  { icon: "/icontech/PostgresSQL.svg", language: "PostgresSQL" },
+  { icon: "/icontech/Spring.svg", language: "SpringBoot" },
+
 ];
 
 export default function FullWidthTabs() {
@@ -184,6 +209,18 @@ export default function FullWidthTabs() {
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
   const displayedCertificates = showAllCertificates ? certificates : certificates.slice(0, initialItems);
+
+
+  const data_certificates = [
+    "/certificates/Photo.png", // เส้นทางภาพแรก
+    "/certificates/Photo.png", // เส้นทางภาพที่สอง
+    "/certificates/photo3.png", 
+    "/certificates/Photo.png", // เส้นทางภาพแรก
+    "/certificates/Photo.png", // เส้นทางภาพที่สาม
+    // เพิ่มไฟล์อื่นๆ ได้
+  ];
+
+
 
   return (
     <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
@@ -282,8 +319,8 @@ export default function FullWidthTabs() {
               {...a11yProps(0)}
             />
             <Tab
-              icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Certificates"
+              icon={<Wrench className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Technical and Network  "
               {...a11yProps(1)}
             />
             <Tab
@@ -330,15 +367,44 @@ export default function FullWidthTabs() {
           </TabPanel>
 
           <TabPanel value={value} index={1} dir={theme.direction}>
+          /////
+          <span style={{
+            color: '#6366f1',
+            backgroundImage: 'linear-gradient(45deg, #6366f1 10%, #a855f7 93%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            fontSize: "2rem",
+          }}>
+            OS
+          </span>
+<div id="TechStackIconn" className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
+<div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-6 gap-4 w-full pb-[5%]">
+
+  {technical.map((stack, index) => (
+    <div
+      key={index}
+      data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+      data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+    >
+      <TechStackIcon TechStackIcon={stack.icon} Language={stack.language}  className="flex justify-center items-center w-1/6 md:w-full" />
+    </div>
+  ))}
+</div>
+
+</div>
+///////
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
-                {displayedCertificates.map((certificate, index) => (
+           
+                {data_certificates.map((imgSrc, index) => (
                   <div
                     key={index}
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
-                    <Certificate ImgSertif={certificate.Img} />
+                    <Certificate ImgSertif={imgSrc} />
+                    {/* <Certificate ImgSertif="/certificates/Photo.png" /> */}
                   </div>
                 ))}
               </div>
