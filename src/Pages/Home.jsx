@@ -4,6 +4,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useValue } from './ValueContext.jsx'; 
+import Tilt from 'react-parallax-tilt';
 
 
 // Memoized Components
@@ -267,16 +268,21 @@ const Home = () => {
               data-aos="fade-left"
               data-aos-delay="600">
               <div className="relative w-full opacity-90">
-                <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
+                <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-500 ease-in-out ${
                   isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
                 }`}>
                 </div>
 
-                <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${
+                {/* <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${
                   isHovering ? "scale-105" : "scale-100"
                 }`}>
                   <DotLottieReact {...lottieOptions} />
-                </div>
+                </div> */}
+                <Tilt>
+            <div className="relative md:bottom-[3em] bottom-[5em]">
+              <img src="/Computer.svg" alt="Ilustrasi komputer" id="ImgKomputer" />
+            </div>
+          </Tilt>
 
                 <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
                   isHovering ? "opacity-50" : "opacity-20"
